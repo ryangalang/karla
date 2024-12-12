@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD API Interface</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #74ebd5, #acb6e5);
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        h1, h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2rem;
+            color: #333;
+        }
+        
+        /* Container Styling */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Form Styling */
+        form {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        
+        form input, form button {
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            flex: 1 1 calc(33% - 15px);
+        }
+        
+        form button {
+            background-color: #74ebd5;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            flex: 1 1 100%;
+            font-weight: bold;
+        }
+
+        form button:hover {
+            background-color: #57c5c0;
+        }
+        
+        /* Table Styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f4f4f4;
+            font-weight: bold;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tbody tr:hover {
+            background-color: #f1f1f1;
+        }
+        
+        /* Button Styling for Actions */
+        .btn {
+            padding: 8px 12px;
+            font-size: 14px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .btn-edit {
+            background-color: #ffc107;
+            color: #fff;
+        }
+
+        .btn-edit:hover {
+            background-color: #e0a800;
+        }
+
+        .btn-delete {
+            background-color: #dc3545;
+            color: #fff;
+        }
+
+        .btn-delete:hover {
+            background-color: #c82333;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            form input, form button {
+                flex: 1 1 100%;
+            }
+
+            table, th, td {
+                font-size: 14px;
+            }
+
+            th, td {
+                padding: 10px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>CRUD API Interface</h1>
+
+        <!-- User Form -->
+        <h2>Manage Users</h2>
+        <form id="userForm">
+            <input type="text" id="userFName" placeholder="First Name" required>
+            <input type="text" id="userLName" placeholder="Last Name" required>
+            <input type="email" id="userEmail" placeholder="Email" required>
+            <input type="text" id="userPhoneNumber" placeholder="Phone Number" required>
+            <input type="text" id="userAddress" placeholder="Address" required>
+            <input type="text" id="userCity" placeholder="City" required>
+            <input type="text" id="userPostalCode" placeholder="Postal Code" required>
+            <button type="submit">Add User</button>
+        </form>
+
+        <!-- User Table -->
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Phone Number</th>
+                    <th>Address</th>
+                    <th>City</th>
+                    <th>Postal Code</th>
+                    <th>Created At</th>
+                    <th>Updated At</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="userList">
+                <!-- Populated by JavaScript -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Add similar sections for Students, Movies, and Products -->
+    
+    <script src="your_script.js"></script>
+</body>
+</html>
